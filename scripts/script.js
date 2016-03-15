@@ -34,12 +34,12 @@ function checkGuess(){
 	//console.log(counterGuess);
 	
 	// get value from the input element
-	var guessedNum = parseFloat(numberInput.value);
+	var guessedNum = numberInput.value;
 	console.log(guessedNum);
 	
 	// test if value entered is valid
-	if(isNaN(guessedNum) === true){
-		messageOutput.innerHTML = 'Please enter a number between 1 and 100';
+	if(!isNumeric(guessedNum)){
+		messageOutput.innerHTML = 'Not a number...please enter a valid number';
 	}else if(guessedNum < 1 || guessedNum > 100){
 		messageOutput.innerHTML = 'Please enter a number between 1 and 100';
 	}else{
@@ -57,6 +57,19 @@ function checkGuess(){
 	  }
 	} 
 } // end checkGuess function
+
+// Check if value is a number 
+//
+// Note: Works for the purpose of this app...may not be 
+//       suitable for other applications...
+//
+// Solution for this from this StackOverflow answer:
+//
+// http://stackoverflow.com/a/5778071
+//
+function isNumeric(val) {
+	return !isNaN(parseFloat(val)) && isFinite(val);
+}
 
 // Game Finished function
 function correctGuess(numberOfGuesses){
