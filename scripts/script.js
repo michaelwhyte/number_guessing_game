@@ -2,7 +2,7 @@
 
 // Global game variables
 var ranNum = genRanNum();
-console.log(ranNum)
+console.log(ranNum);
 var numberInput = document.getElementById('number_input');
 var btnEnterGuess = document.getElementById('btn_enter_guess');
 var messageOutput = document.getElementById('message_output');
@@ -70,4 +70,3 @@ function correctGuess(numberOfGuesses){
 		messageOutput.innerHTML = 'You guessed correctly. It took you ' + numberOfGuesses + ' guesses to guess the correct number';
 	}			
 } // end gameFinished function
-
