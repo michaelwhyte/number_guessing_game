@@ -31,7 +31,6 @@ function genRanNum(){
 function checkGuess(){
 	counterGuess++;
 	var numIsValid = false;
-	//console.log(counterGuess);
 	
 	// get value from the input element
 	var guessedNum = numberInput.value;
